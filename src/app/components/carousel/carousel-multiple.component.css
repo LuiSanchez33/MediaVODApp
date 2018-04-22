@@ -1,0 +1,43 @@
+.container{
+  margin-top: 30px;
+  text-align: center;
+  background-color: #e9ecef;
+}
+
+.card-title{
+  color: black;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+a:hover{
+  color: blue;
+}
+
+.mobile{
+  display: none;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+@media only screen and (min-width:320px) and (max-width:768px){
+  .container{
+    display: none;
+  }
+
+  .mobile{
+    display: inline-block;
+  }
+
+  .card-columns {
+    display: inline-block;
+    column-count: 2;
+  }
+
+  .mobileTitle{
+    font-size: 20px;
+    text-align: center;
+  }
+}

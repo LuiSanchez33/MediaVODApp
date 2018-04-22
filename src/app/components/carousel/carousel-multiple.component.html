@@ -1,0 +1,180 @@
+<div class="container">
+  <br>
+
+  <h1 class="title">Populas Movies</h1>
+  <br>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000" data-keyboard="true"
+    *ngIf="movies">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-2 col-sm-6">
+            <img class="d-block w-100 pointer" [src]="movies[0] | image:true" (click)="viewVideo(movies[0])" data-toggle="tooltip" data-placement="bottom"
+              title="Play Trailer!">
+            <a [routerLink]="['/movie',movies[0].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[0].title }}</a>
+
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <img class="d-block w-100 pointer" [src]="movies[1] | image:true" (click)="viewVideo(movies[1])" data-toggle="tooltip" data-placement="bottom"
+              title="Play Trailer!">
+            <a [routerLink]="['/movie',movies[1].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[1].title }}</a>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <img class="d-block w-100 pointer" [src]="movies[2] | image:true" (click)="viewVideo(movies[2])" data-toggle="tooltip" data-placement="bottom"
+              title="Play Trailer!">
+            <a [routerLink]="['/movie',movies[2].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[2].title }}</a>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <img class="d-block w-100 pointer" [src]="movies[3] | image:true" (click)="viewVideo(movies[3])" data-toggle="tooltip" data-placement="bottom"
+              title="Play Trailer!">
+            <a [routerLink]="['/movie',movies[3].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[3].title }}</a>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <img class="d-block w-100 pointer" [src]="movies[4] | image:true" (click)="viewVideo(movies[4])" data-toggle="tooltip" data-placement="bottom"
+              title="Play Trailer!">
+            <a [routerLink]="['/movie',movies[4].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[4].title }}</a>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <img class="d-block w-100 pointer" [src]="movies[5] | image:true" (click)="viewVideo(movies[5])" data-toggle="tooltip" data-placement="bottom"
+              title="Play Trailer!">
+            <a [routerLink]="['/movie',movies[5].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[5].title }}</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-2 col-sm-6">
+            <img class="d-block w-100 pointer" [src]="movies[6] | image:true" (click)="viewVideo(movies[6])" data-toggle="tooltip" data-placement="bottom"
+              title="Play Trailer!">
+            <a [routerLink]="['/movie',movies[6].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[6].title }}</a>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <img class="d-block w-100 pointer" [src]="movies[7] | image:true" (click)="viewVideo(movies[7])" data-toggle="tooltip" data-placement="bottom"
+              title="Play Trailer!">
+            <a [routerLink]="['/movie',movies[7].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[7].title }}</a>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <img class="d-block w-100 pointer" [src]="movies[8] | image:true" (click)="viewVideo(movies[8])" data-toggle="tooltip" data-placement="bottom"
+              title="Play Trailer!">
+            <a [routerLink]="['/movie',movies[8].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[8].title }}</a>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <img class="d-block w-100 pointer" [src]="movies[9] | image:true" (click)="viewVideo(movies[9])" data-toggle="tooltip" data-placement="bottom"
+              title="Play Trailer!">
+            <a [routerLink]="['/movie',movies[9].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[9].title }}</a>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <img class="d-block w-100 pointer" [src]="movies[10] | image:true" (click)="viewVideo(movies[10])" data-toggle="tooltip"
+              data-placement="bottom" title="Play Trailer!">
+            <a [routerLink]="['/movie',movies[10].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[10].title }}</a>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <img class="d-block w-100 pointer" [src]="movies[11] | image:true" (click)="viewVideo(movies[11])" data-toggle="tooltip"
+              data-placement="bottom" title="Play Trailer!">
+            <a [routerLink]="['/movie',movies[11].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[11].title }}</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-2 col-sm-6">
+            <img class="d-block w-100 pointer" [src]="movies[12] | image:true" (click)="viewVideo(movies[12])" data-toggle="tooltip"
+              data-placement="bottom" title="Play Trailer!">
+            <a [routerLink]="['/movie',movies[12].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[12].title }}</a>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <img class="d-block w-100 pointer" [src]="movies[13] | image:true" (click)="viewVideo(movies[13])" data-toggle="tooltip"
+              data-placement="bottom" title="Play Trailer!">
+            <a [routerLink]="['/movie',movies[13].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[13].title }}</a>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <img class="d-block w-100 pointer" [src]="movies[14] | image:true" (click)="viewVideo(movies[14])" data-toggle="tooltip"
+              data-placement="bottom" title="Play Trailer!">
+            <a [routerLink]="['/movie',movies[14].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[14].title }}</a>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <img class="d-block w-100 pointer" [src]="movies[15] | image:true" (click)="viewVideo(movies[15])" data-toggle="tooltip"
+              data-placement="bottom" title="Play Trailer!">
+            <a [routerLink]="['/movie',movies[15].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[15].title }}</a>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <img class="d-block w-100 pointer" [src]="movies[16] | image:true" (click)="viewVideo(movies[16])" data-toggle="tooltip"
+              data-placement="bottom" title="Play Trailer!">
+            <a [routerLink]="['/movie',movies[16].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[16].title }}</a>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <img class="d-block w-100 pointer" [src]="movies[17] | image:true" (click)="viewVideo(movies[17])" data-toggle="tooltip"
+              data-placement="bottom" title="Play Trailer!">
+            <a [routerLink]="['/movie',movies[17].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[17].title }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a> -->
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" data-toggle="tooltip"
+    data-placement="bottom" title="Previous!">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" data-toggle="tooltip"
+    data-placement="bottom" title="Next!">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<!--MOBILE-->
+<div class="container mobile">
+  <br>
+
+  <h1 class="title mobileTitle">Popular Movies</h1>
+
+  <hr>
+
+  <div class="card-columns" *ngIf="movies">
+    <div class="card animated fadeIn fast" *ngFor="let movie of movies">
+      <img class="card-img-top img-fluid pointer" [src]="movie | image:true" [alt]="movie.title" (click)="viewVideo(movie)" data-toggle="tooltip"
+        data-placement="bottom" title="Play Trailer!">
+      <div class="card-block">
+        <a [routerLink]="['/movie',movie.id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movie.title }}</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!--MODAL YOUTUBE-->
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static"
+  data-keyboard="true">
+  <div class="modal-dialog" role="document">
+
+    <div class="modal-content" *ngIf="movieSel">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{ movieSel.name }}</h5>
+      </div>
+      <div class="modal-body">
+
+        <iframe width="100%" height="300" [src]="movieSel.key | videoYoutube" frameborder="0" allowfullscreen></iframe>
+
+      </div>
+      <div class="modal-footer">
+        <button (click)="closeModal()" type="button" class="btn btn-secondary">Close Video</button>
+      </div>
+    </div>
+
+  </div>
+</div>
