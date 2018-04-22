@@ -1,4 +1,5 @@
 .container{
+  
   margin-top: 30px;
   text-align: center;
   background-color: #e9ecef;
@@ -8,6 +9,18 @@
   color: black;
   font-size: 1.25rem;
   font-weight: bold;
+}
+
+.carousel-control-next, .carousel-control-prev{
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 30px;
+  opacity: 1.5;
+}
+
+.img:focus img{
+  border: 2px solid blue;
 }
 
 a:hover{

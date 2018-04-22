@@ -1,8 +1,13 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { MoviesService } from '../../services/movies.service';
 import swal from 'sweetalert2';
 
 declare var $: any;
+
+export enum KEY_CODE {
+  RIGHT_ARROW = 39,
+  LEFT_ARROW = 37
+}
 
 @Component({
   selector: 'app-carousel-multiple',
@@ -45,5 +50,22 @@ export class CarouselMultipleComponent implements OnInit {
   closeModal() {
     this.movieSel = null;
     $('#myModal').modal('hide');
+  }
+
+  @HostListener('window:keyup', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    //console.log(event);
+
+    if (event.keyCode === KEY_CODE.RIGHT_ARROW) {
+
+      $('#myCarousel').carousel('next');
+      console.log($('#carouselInner'));
+
+    }
+
+    if (event.keyCode === KEY_CODE.LEFT_ARROW) {
+
+      $('#myCarousel').carousel('prev');
+    }
   }
 }

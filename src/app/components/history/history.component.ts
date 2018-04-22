@@ -14,10 +14,18 @@ export class HistoryComponent implements OnInit {
   videos: any[] = [];
 
   constructor(private _ms: MoviesService) {
+
+    this._ms.videos = JSON.parse(localStorage.getItem("history"));
+    if (!this._ms.videos) {
+
+      this._ms.videos = [];
+    }
+
     this.videos = _ms.videos;
   }
 
   ngOnInit() {
+
   }
 
   viewVideo(video: any) {

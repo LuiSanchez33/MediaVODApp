@@ -1,18 +1,17 @@
 <div class="container">
   <br>
 
-  <h1 class="title">Populas Movies</h1>
+  <h1 class="title">Popular Movies</h1>
   <br>
 
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000" data-keyboard="true"
-    *ngIf="movies">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000" *ngIf="movies">
 
-    <div class="carousel-inner">
+    <div class="carousel-inner" id="carouselInner">
       <div class="carousel-item active">
         <div class="row">
           <div class="col-md-2 col-sm-6">
-            <img class="d-block w-100 pointer" [src]="movies[0] | image:true" (click)="viewVideo(movies[0])" data-toggle="tooltip" data-placement="bottom"
-              title="Play Trailer!">
+            <img id="img1" class="d-block w-100 pointer" [src]="movies[0] | image:true" (click)="viewVideo(movies[0])" data-toggle="tooltip"
+              data-placement="bottom" title="Play Trailer!">
             <a [routerLink]="['/movie',movies[0].id]" class="card-title mobileTitle" data-toggle="tooltip" data-placement="bottom" title="View details!">{{ movies[0].title }}</a>
 
           </div>
@@ -113,25 +112,22 @@
       </div>
     </div>
 
-    <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a> -->
+
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" data-toggle="tooltip"
-    data-placement="bottom" title="Previous!">
+
+  <br>
+
+  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev" data-toggle="tooltip" data-placement="bottom"
+    title="Previous!">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" data-toggle="tooltip"
-    data-placement="bottom" title="Next!">
+  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next" data-toggle="tooltip" data-placement="bottom"
+    title="Next!">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+
 </div>
 
 <!--MOBILE-->

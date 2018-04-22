@@ -56,7 +56,13 @@ export class MoviesService {
 
   addVideo(newVideo: any) {
 
-    this.videos = this.videos.filter(video => video.id !== newVideo.id);
+    if (this.videos) {
+      this.videos = this.videos.filter(video => video.id !== newVideo.id);
+    }
+
     this.videos.unshift(newVideo);
+
+    //save in local storage
+    localStorage.setItem('history', JSON.stringify(this.videos));
   }
 }
